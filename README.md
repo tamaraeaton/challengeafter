@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Bounteous JavaScript Coding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+​
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+​
+You will be building an app that allows the user to enter text and search for TV shows. When a user searches, the results will be display below to the user. This app will be responsive and have a different user experience for "mobile" and "desktop". Example screenshots are available in `docs`. This project uses `npm` for adoptability. We intentionally give you a pretty blank project so you can have control on the libraries you bring in as well as implementation.
+​
 
-### `npm start`
+## Core Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+​
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- create a search input that allows the user to enter search text
+  - can either be on "submit" button press or realtime
+  - says "Enter TV Show" when no value is in the input
+- retrieve the search results from a HTTP GET request to `https://api.tvmaze.com/search/shows?q={SEARCH_TEXT}` where `{SEARCH_TEXT}` is the text from the search field
+- processing the shows
+  - by default, sort the results by `score`, allow the user to sort by `name` or `rating` as well
+  - display the number of results found
+  - display the results (based on viewport below)
+- allow the user to select a show - opens a modal displaying more information about that show - the modal should display the following information for the selected show - `name` - `status` - `rating` - `image.medium` (or `public/placeholder.jpg` if not present) - `premiered` to `ended` (if show is not ended, just show `premiered`)
+  ​
 
-### `npm test`
+### Mobile Viewport: < 768px
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+​
+results will be in a list, displaying the show's `name`, the medium `image` (or `public/placeholder.jpg` if no image), and the show's `rating`.
+​
+_example of this layout can be seen in `docs/mobile-results.jpg`_
+​
 
-### `npm run build`
+### Desktop Viewport: >= 768px
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+​
+results will be in a tile format, showing 4 shows in a single row and left aligned. A given tile will show the show's `name`, the medium `image` (or `public/placeholder.jpg` if no image), and the show's `rating`.
+​
+_example of this layout can be seen in `docs/desktop-results.jpg`_
+​
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Bonus Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+​
+None of the items below are required for submission. They each touch on other aspects of building web applications and are available to you to show more of your skills.
+​
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [] implementing a basic theme by adding custom fonts, colors, etc
+- [] add secondary controls after search results are provided to filter the list (ex. genre, status, country, etc)
+- [] persist search text and results between page refreshes
+- [] allow for the `s` query parameter to automatically fill and search, allowing for deeplinking (ex. `?s=superman`)
+- [] unit testing with `react-testing-library` and `jest`
+- [] a11y improvements to make the app more accessible
+- [] add routing, creating another page when clicking on a movie instead of displaying a modal
+- [] track search history (the text search, not the results)
+- [] export results to CSV file
