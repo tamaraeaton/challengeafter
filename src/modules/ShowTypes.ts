@@ -8,11 +8,11 @@ export interface Show {
     //     type: "Animation";
     //     language: "English";
     //     genres: ["Action", "Adventure", "Science-Fiction"];
-    //     status: "Ended";
+    status: string; // "Ended";
     //     runtime: 30;
     //     averageRuntime: 30;
-    //     premiered: "1988-09-17";
-    //     ended: "1988-12-17";
+    premiered: string; // "2022-09-17";
+    ended: string; // "2022-12-17";
     //     officialSite: null;
     //     schedule: { time: "08:30"; days: ["Saturday"] };
     rating: { average: number | null }; // { average: null }
@@ -36,7 +36,7 @@ export interface Show {
     //   original: "https://static.tvmaze.com/uploads/images/original_untouched/26/66186.jpg";
     // };
 
-    //     summary: "<p><b>Superman </b>is a 1988 animated Saturday morning television series produced by Ruby-Spears Productions and Warner Bros. Television that aired on CBS featuring the DC Comics superhero of the same name (coinciding with the character's 50th anniversary, along with the live-action Superboy TV series that year). Veteran comic book writer Marv Wolfman was the head story editor, and noted comic book artist Gil Kane provided character designs.</p>";
+    summary: string; // "<p><b>Superman </b>is a 1988 animated Saturday morning television series produced by Ruby-Spears Productions and Warner Bros. Television that aired on CBS featuring the DC Comics superhero of the same name (coinciding with the character's 50th anniversary, along with the live-action Superboy TV series that year). Veteran comic book writer Marv Wolfman was the head story editor, and noted comic book artist Gil Kane provided character designs.</p>";
     //     updated: 1634475247;
     //     _links: {
     //       self: { href: "https://api.tvmaze.com/shows/7073" };

@@ -10,18 +10,17 @@ You will be building an app that allows the user to enter text and search for TV
 
 ## Core Requirements
 
-​
+​- [XX] create a search input that allows the user to enter search text
 
-- create a search input that allows the user to enter search text
-  - can either be on "submit" button press or realtime
-  - says "Enter TV Show" when no value is in the input
-- retrieve the search results from a HTTP GET request to `https://api.tvmaze.com/search/shows?q={SEARCH_TEXT}` where `{SEARCH_TEXT}` is the text from the search field
-- processing the shows
-  - by default, sort the results by `score`, allow the user to sort by `name` or `rating` as well
-  - display the number of results found
-  - display the results (based on viewport below)
-- allow the user to select a show - opens a modal displaying more information about that show - the modal should display the following information for the selected show - `name` - `status` - `rating` - `image.medium` (or `public/placeholder.jpg` if not present) - `premiered` to `ended` (if show is not ended, just show `premiered`)
-  ​
+- [x] can either be on "submit" button press or realtime
+- [x] says "Enter TV Show" when no value is in the input
+- [x] retrieve the search results from a HTTP GET request to `https://api.tvmaze.com/search/shows?q={SEARCH_TEXT}` where `{SEARCH_TEXT}` is the text from the search field
+- [] processing the shows
+  - [] by default, sort the results by `score`, allow the user to sort by `name` or `rating` as well
+  - [] display the number of results found
+  - [?] display the results (based on viewport below)
+- [x] allow the user to select a show - opens a modal displaying more information about that show - the modal should display the following information for the selected show - `name` - `status` - `rating` - `image.medium` (or `public/placeholder.jpg` if not present) - `premiered` to `ended` (if show is not ended, just show `premiered`)
+      ​
 
 ### Mobile Viewport: < 768px
 

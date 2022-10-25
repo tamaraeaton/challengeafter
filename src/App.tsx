@@ -9,7 +9,6 @@ import FetchTVShows from "./utils/TVShowAPI";
 
 function App() {
   const [TVShows, setTVShows] = useState<Show[]>([]);
-  const [TVShowItem, setTVShowItem] = useState<Show[]>([]);
 
   const getTVShows = async (name: string) => {
     const tvShows = await FetchTVShows(name);
@@ -20,18 +19,10 @@ function App() {
     getTVShows(searchTerm);
   };
 
-  // const showItemData = () => {
-  // get the id of the item clicked
-  // pass the props of the item data to be view on the item
-  //
-  // };
-
   useEffect(() => {
     console.log(sortShowsBy(SortShowsTypes.SCORE, TVShows));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [TVShows]);
-
-  // do I need a screens component so the Home can have all the divs instead of the App?  Is this why the Route isn't working?
 
   return (
     <React.Fragment>

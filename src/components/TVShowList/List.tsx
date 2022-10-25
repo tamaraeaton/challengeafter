@@ -1,5 +1,5 @@
 import { PropsWithChildren, FunctionComponent } from "react";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Show } from "../../modules/ShowTypes";
 export interface ListProps {
   showData: Show[];
