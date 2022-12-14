@@ -1,0 +1,13 @@
+/* Basic Theme */
+/* download font family from Google */
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-weight: 200;
+}
+
+h2 {
+  color: #4287f5;
+}

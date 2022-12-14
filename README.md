@@ -15,10 +15,10 @@ You will be building an app that allows the user to enter text and search for TV
 - [x] can either be on "submit" button press or realtime
 - [x] says "Enter TV Show" when no value is in the input
 - [x] retrieve the search results from a HTTP GET request to `https://api.tvmaze.com/search/shows?q={SEARCH_TEXT}` where `{SEARCH_TEXT}` is the text from the search field
-- [] processing the shows
-  - [] by default, sort the results by `score`, allow the user to sort by `name` or `rating` as well
-  - [] display the number of results found
-  - [?] display the results (based on viewport below)
+- Processing the shows
+  - [x] by default, sort the results by `score`, allow the user to sort by `name` or `rating` as well
+  - [x] display the number of results found
+  - [?] display the results (based on viewport below) (breakpoints)
 - [x] allow the user to select a show - opens a modal displaying more information about that show - the modal should display the following information for the selected show - `name` - `status` - `rating` - `image.medium` (or `public/placeholder.jpg` if not present) - `premiered` to `ended` (if show is not ended, just show `premiered`)
       ​
 
@@ -46,10 +46,10 @@ None of the items below are required for submission. They each touch on other as
 
 - [] implementing a basic theme by adding custom fonts, colors, etc
 - [] add secondary controls after search results are provided to filter the list (ex. genre, status, country, etc)
-- [] persist search text and results between page refreshes
-- [] allow for the `s` query parameter to automatically fill and search, allowing for deeplinking (ex. `?s=superman`)
+- [x] persist search text and results between page refreshes (use localStorage)
+- [x] allow for the `s` query parameter to automatically fill and search, allowing for deeplinking (ex. `?s=superman`) (http://localhost:3001/?s=superman)
 - [] unit testing with `react-testing-library` and `jest`
 - [] a11y improvements to make the app more accessible
-- [] add routing, creating another page when clicking on a movie instead of displaying a modal
+- [x] add routing, creating another page when clicking on a movie instead of displaying a modal
 - [] track search history (the text search, not the results)
 - [] export results to CSV file

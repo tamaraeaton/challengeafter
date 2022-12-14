@@ -1,4 +1,5 @@
 import { FunctionComponent, ChangeEventHandler } from "react";
+import "./SearchBar.css";
 export interface SearchBarProps {
   onSearchTermChange: (searchTerm: string) => void;
   searchTerm: string;
@@ -15,7 +16,7 @@ const SearchBar: FunctionComponent<SearchBarProps> = ({
   };
 
   return (
-    <section>
+    <section id="searchbar-section">
       <form onSubmit={onSubmit}>
         <input
           type="text"
